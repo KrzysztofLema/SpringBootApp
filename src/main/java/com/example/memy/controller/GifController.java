@@ -7,6 +7,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created by slickender on 02.08.2017.
@@ -30,5 +31,10 @@ public class GifController {
     public String showFavorites(ModelMap modelMap){
         modelMap.addAttribute("gifs",gifDaoImpl.findFavourites());
     return ("favorites");
+    }
+    @GetMapping("/gifs/search")
+    public String result(@RequestParam String q, ModelMap modelMap){
+        modelMap.addAttribute("gifs", gifDaoImpl.findByName(q));
+        return "home";
     }
 }

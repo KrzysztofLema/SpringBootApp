@@ -41,4 +41,16 @@ public class GifDaoImpl implements GifDao {
         }
         return favouritesGifs;
     }
+
+    @Override
+    public List<Gif> findByName(String name) {
+        List<Gif> result = new ArrayList<>();
+        for (Gif gif : gifList) {
+            if (gif.getName().equals(name)) {
+                result.add(gif);
+            }
+        }
+        return result;
+
+    }
 }
