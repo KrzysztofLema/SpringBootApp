@@ -16,7 +16,7 @@ public class CategoryDaoImpl {
         categoryList.add(new Category(2L,"Realistic"));
         categoryList.add(new Category(3L, "Terrible"));
     }
-
+    
     public List<Category> findAll(){
         return categoryList;
     }
