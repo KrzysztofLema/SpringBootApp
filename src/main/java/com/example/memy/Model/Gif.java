@@ -7,14 +7,14 @@ import java.awt.*;
  */
 public class Gif {
     private String name;
-    private boolean isFavourite;
+    private boolean favorite;
 
     public Gif() {
     }
 
-    public Gif(String name, boolean isFavourite) {
+    public Gif(String name, boolean favorite) {
         this.name = name;
-        this.isFavourite = isFavourite;
+        this.favorite = favorite;
     }
 
     public String getName() {
@@ -25,11 +25,11 @@ public class Gif {
         this.name = name;
     }
 
-    public boolean isFavourite() {
-        return isFavourite;
+    public boolean getFavorite() {
+        return favorite;
     }
 
-    public void setFavourite(boolean favourite) {
-        isFavourite = favourite;
+    public void setFavorite(boolean favorite) {
+        favorite = favorite;
     }
 }
