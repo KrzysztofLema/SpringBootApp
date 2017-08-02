@@ -13,7 +13,7 @@ public class GifController {
     @GetMapping("/")
     public String home(ModelMap modelMap){
         GifDaoImpl gifDaoImpl=new GifDaoImpl();
-        modelMap.addAttribute("gifs", gifDaoImpl.findAll());
+        modelMap.addAttribute("gifs", gifDaoImpl.allGifs());
         return "home";
     }
 }
