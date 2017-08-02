@@ -12,4 +12,5 @@ public class HelloController {
         modelMap.addAttribute("hello", "Krzysiek");
         return "hello";
     }
+
 }
