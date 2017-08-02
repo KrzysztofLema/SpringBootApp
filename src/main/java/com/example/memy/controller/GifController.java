@@ -13,16 +13,22 @@ import org.springframework.web.bind.annotation.PathVariable;
  */
 @Controller
 public class GifController {
+    GifDaoImpl gifDaoImpl=new GifDaoImpl();
     @GetMapping("/")
     public String home(ModelMap modelMap){
-        GifDaoImpl gifDaoImpl=new GifDaoImpl();
+
         modelMap.addAttribute("gifs", gifDaoImpl.allGifs());
         return "home";
     }
     @GetMapping("/gif/{name}")
     public String display(@PathVariable String name, @ModelAttribute Gif gif, ModelMap modelMap){
-        GifDaoImpl gifDaoImpl=new GifDaoImpl();
+
         modelMap.addAttribute("allgifs",gifDaoImpl.allGifs());
         return ("gif-details");
+    }
+    @GetMapping("/favorites")
+    public String showFavorites(ModelMap modelMap){
+        modelMap.addAttribute("gifs",gifDaoImpl.findFavourites());
+    return ("favorites");
     }
 }
