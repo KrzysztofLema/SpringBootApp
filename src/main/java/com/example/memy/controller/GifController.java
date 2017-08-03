@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * Created by slickender on 02.08.2017.
  */
+
 @Controller
 public class GifController {
     GifDaoImpl gifDaoImpl=new GifDaoImpl();
