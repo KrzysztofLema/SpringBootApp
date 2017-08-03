@@ -10,8 +10,10 @@ import java.util.List;
  * Created by slickender on 02.08.2017.
  */
 public class CategoryDaoImpl {
+
     private static List<Category> categoryList = new ArrayList<>();
     private GifDaoImpl gifDao= new GifDaoImpl();
+
     static {
         categoryList.add(new Category(1L,"Painted"));
         categoryList.add(new Category(2L,"Realistic"));
@@ -29,5 +31,15 @@ public class CategoryDaoImpl {
             return categoryList.get(1);
         }else
             return categoryList.get(2);
+    }
+
+    public Category findByName(String name) {
+        Category result = new Category();
+        for (Category category : categoryList) {
+            if (category.getName().equals(name)) {
+                result = category;
+            }
+        }
+        return result;
     }
 }

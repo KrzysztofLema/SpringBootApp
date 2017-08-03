@@ -30,7 +30,6 @@ public class HelloController {
         model.addAttribute("feed", feed);
         return "hello";
     }
-
 }
 
 

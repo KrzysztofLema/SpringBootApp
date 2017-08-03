@@ -6,6 +6,7 @@ import java.awt.*;
  * Created by slickender on 02.08.2017.
  */
 public class Gif {
+    
     private String name;
     private boolean favorite;
     private String userName;

@@ -14,7 +14,6 @@ public class ArticleDaoImp implements ArticleDao {
         articles.add(new Article(3,"Articul3","OpisOpisOpis"));
         articles.add(new Article(4,"Articul4","OpisOpisOpis"));
         articles.add(new Article(5,"Articul5","OpisOpisOpis"));
-
     }
 
     @Override
