@@ -2,10 +2,6 @@ package com.example.memy.ArticleDao;
 
 import com.example.memy.Model.Gif;
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.*;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,14 +14,14 @@ public class GifDaoImpl implements GifDao {
     private static CategoryDaoImpl categoryDao= new CategoryDaoImpl();
 
     static {
-        gifList.add(new Gif("android-explosion", true, categoryDao.findAll().get(0)));
-        gifList.add(new Gif("ben-and-mike", false, categoryDao.findAll().get(0)));
-        gifList.add(new Gif("book-dominos", false, categoryDao.findAll().get(1)));
-        gifList.add(new Gif("compiler-bot", true, categoryDao.findAll().get(1)));
-        gifList.add(new Gif("cowboy-coder", false, categoryDao.findAll().get(2)));
-        gifList.add(new Gif("infinite-andrew", false, categoryDao.findAll().get(2)));
+        gifList.add(new Gif("android-explosion", true,"asdf", categoryDao.findAll().get(0)));
+        gifList.add(new Gif("ben-and-mike", false,"zxcasd", categoryDao.findAll().get(0)));
+        gifList.add(new Gif("book-dominos", false,"zxasdqwe", categoryDao.findAll().get(1)));
+        gifList.add(new Gif("compiler-bot", true,"iwjeoij", categoryDao.findAll().get(1)));
+        gifList.add(new Gif("cowboy-coder", false,"j cljjnadl", categoryDao.findAll().get(2)));
+        gifList.add(new Gif("infinite-andrew", false,"pqoowejj", categoryDao.findAll().get(2)));
     }
-
+    
     public List<Gif> allGifs() {
         return gifList;
     }
@@ -73,6 +69,11 @@ public class GifDaoImpl implements GifDao {
             }
         }
         return result;
-
     }
+
+
+
+
+
 }
+

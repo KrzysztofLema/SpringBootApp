@@ -8,8 +8,25 @@ import java.awt.*;
 public class Gif {
     private String name;
     private boolean favorite;
+    private String userName;
     private Category category;
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public Gif(String name, boolean favorite, String userName, Category category) {
+        this.name = name;
+        this.favorite = favorite;
+        this.userName = userName;
+        this.category = category;
+    }
+
+    public Gif(String name, boolean favorite, String userName) {
+        this.name = name;
+        this.favorite = favorite;
+        this.userName = userName;
+    }
     public Gif() {
     }
 
