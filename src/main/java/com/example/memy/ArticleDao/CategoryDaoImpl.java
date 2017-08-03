@@ -22,22 +22,12 @@ public class CategoryDaoImpl {
         return categoryList;
     }
 
-    public Category gifsInCategory(Long id){
-
-        if (id==categoryList.get(0).getId()) {
-            categoryList.get(0).addGifsToCattegory(gifDao.allGifs().get(2));
-            categoryList.get(0).addGifsToCattegory(gifDao.allGifs().get(3));
-            categoryList.get(0).addGifsToCattegory(gifDao.allGifs().get(4));
+    public Category getCategory(Long id){
+        if (id==1L){
             return categoryList.get(0);
-        }else if (id==categoryList.get(1).getId()) {
-            categoryList.get(1).addGifsToCattegory(gifDao.allGifs().get(0));
-            categoryList.get(1).addGifsToCattegory(gifDao.allGifs().get(1));
-            categoryList.get(1).addGifsToCattegory(gifDao.allGifs().get(5));
+        }else if (id==2L){
             return categoryList.get(1);
-        }else {
-            categoryList.get(2).addGifsToCattegory(gifDao.allGifs().get(0));
-            categoryList.get(2).addGifsToCattegory(gifDao.allGifs().get(5));
+        }else
             return categoryList.get(2);
-        }
     }
 }
