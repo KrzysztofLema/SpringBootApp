@@ -11,4 +11,5 @@ import java.util.List;
 public interface CategoryDao {
     List<Category> findAll();
     Category getCategory(Long id);
+    List<Gif> findByName(String name);
 }

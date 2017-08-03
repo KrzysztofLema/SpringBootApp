@@ -15,4 +15,8 @@ public interface GifDao {
     List<Gif> findByName(String name);
 
     List<Gif> gifsInCategory(Long id);
+
+    List<Gif> gifsInCategory(String name);
+
+
 }

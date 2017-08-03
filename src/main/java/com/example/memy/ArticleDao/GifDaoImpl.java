@@ -21,9 +21,20 @@ public class GifDaoImpl implements GifDao {
         gifList.add(new Gif("cowboy-coder", false,"j cljjnadl", categoryDao.findAll().get(2)));
         gifList.add(new Gif("infinite-andrew", false,"pqoowejj", categoryDao.findAll().get(2)));
     }
-    
+
     public List<Gif> allGifs() {
         return gifList;
+    }
+
+    public List<Gif> gifsInCategory(String name){
+        List<Gif> result=new ArrayList<>();
+        if (categoryDao.findAll().get(0).getName().equals(name))
+            result=gifsInCategory(categoryDao.findAll().get(0).getId());
+        else if (categoryDao.findAll().get(1).getName().equals(name))
+            result=gifsInCategory(categoryDao.findAll().get(1).getId());
+        else if (categoryDao.findAll().get(2).getName().equals(name))
+            result=gifsInCategory(categoryDao.findAll().get(2).getId());
+        return result;
     }
 
     public List<Gif> gifsInCategory(Long id){
@@ -55,7 +66,6 @@ public class GifDaoImpl implements GifDao {
             if (gifList.get(i).getFavorite() == true) {
                 favouritesGifs.add(gifList.get(i));
             }
-
         }
         return favouritesGifs;
     }

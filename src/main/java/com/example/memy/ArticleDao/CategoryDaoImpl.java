@@ -30,4 +30,14 @@ public class CategoryDaoImpl {
         }else
             return categoryList.get(2);
     }
+
+    public Category findByName(String name) {
+        Category result = new Category();
+        for (Category category : categoryList) {
+            if (category.getName().equals(name)) {
+                result = category;
+            }
+        }
+        return result;
+    }
 }

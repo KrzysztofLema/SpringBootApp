@@ -32,7 +32,4 @@ public class GifController {
         modelMap.addAttribute("gifs", gifDaoImpl.findByName(q));
         return "home";
     }
-
-
-
 }
