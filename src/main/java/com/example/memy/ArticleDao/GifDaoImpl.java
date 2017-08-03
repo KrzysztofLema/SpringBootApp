@@ -2,10 +2,6 @@ package com.example.memy.ArticleDao;
 
 import com.example.memy.Model.Gif;
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.*;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,15 +12,17 @@ public class GifDaoImpl implements GifDao {
 
     private static List<Gif> gifList = new ArrayList<>();
 
+
     static {
-        gifList.add(new Gif("android-explosion", true));
-        gifList.add(new Gif("ben-and-mike", false));
-        gifList.add(new Gif("book-dominos", false));
-        gifList.add(new Gif("compiler-bot", true));
-        gifList.add(new Gif("cowboy-coder", false));
-        gifList.add(new Gif("infinite-andrew", false));
+        gifList.add(new Gif("android-explosion", true,"asdf"));
+        gifList.add(new Gif("ben-and-mike", false,"zxcasd"));
+        gifList.add(new Gif("book-dominos", false,"zxasdqwe"));
+        gifList.add(new Gif("compiler-bot", true,"iwjeoij"));
+        gifList.add(new Gif("cowboy-coder", false,"j cljjnadl"));
+        gifList.add(new Gif("infinite-andrew", false,"pqoowejj"));
 
     }
+
 
     public List<Gif> allGifs() {
         return gifList;
@@ -51,6 +49,11 @@ public class GifDaoImpl implements GifDao {
             }
         }
         return result;
-
     }
+
+
+
+
+
 }
+

@@ -4,10 +4,7 @@ import com.example.memy.ArticleDao.GifDaoImpl;
 import com.example.memy.Model.Gif;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by slickender on 02.08.2017.
@@ -23,8 +20,7 @@ public class GifController {
     }
     @GetMapping("/gif/{name}")
     public String display(@PathVariable String name, @ModelAttribute Gif gif, ModelMap modelMap){
-
-        modelMap.addAttribute("allgifs",gifDaoImpl.allGifs());
+        modelMap.addAttribute("gif",gifDaoImpl.findByName(name).get(0));
         return ("gif-details");
     }
     @GetMapping("/favorites")
@@ -37,4 +33,7 @@ public class GifController {
         modelMap.addAttribute("gifs", gifDaoImpl.findByName(q));
         return "home";
     }
+
+
+
 }
