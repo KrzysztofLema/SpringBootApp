@@ -15,5 +15,4 @@ public class CategoriesApiController {
         CategoryDaoImpl categoryDao = new CategoryDaoImpl();
         return categoryDao.findAll();
     }
-
 }
