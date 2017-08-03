@@ -1,6 +1,7 @@
 package com.example.memy.Model;
 
 public class Article {
+
     public int id;
     public String title;
     public String description;
@@ -8,7 +9,6 @@ public class Article {
 
     public Article() {
     }
-
 
     public Article(int id, String title, String description) {
         this.id = id;

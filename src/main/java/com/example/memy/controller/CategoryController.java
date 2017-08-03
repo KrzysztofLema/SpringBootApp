@@ -30,6 +30,7 @@ public class CategoryController {
         modelMap.addAttribute("gifs", gifDao.gifsInCategory(id));
         return ("category");
     }
+
     @GetMapping("/category/search")
     public String result(@RequestParam String q, ModelMap modelMap){
         modelMap.addAttribute("category", categoryDaoImpl.findByName(q));
